@@ -1,0 +1,59 @@
+body {background-color: pink;}
+h1 {color: white;}
+h1 {font-size: 100px;}
+h1 {text-align: center;}
+h1 {font-family:Verdana, Geneva, Tahoma, sans-serif;}
+
+.flexbox-container {display: flex}
+
+.flexbox-item {
+    width: 650px;
+    margin: 15px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.Introduction {min-height: 100px;
+background-color: rgb(231, 190, 240);} 
+.Introduction h1 {color: rgb(255, 255, 255);}
+.Introduction h2 {color: white;}
+.Introduction p {color: white;}
+.Introduction ul {color: white;}
+.Introduction h1 {font-size: 50px;}
+.Introduction h1 {font-size: 50px;}
+.Introduction h1 {font-family: 'Times New Roman', Times, serif;}
+.Introduction {margin: 15px;}
+.Introduction {padding: 15px;}
+.Introduction p {text-align: left;}
+.Introduction h1 {text-decoration: underline wavy rgb(255, 255, 255) 5px;}
+
+
+.Warning {min-height: 100px;
+background-color: rgb(228, 124, 199);}
+.Warning h1 {color: rgb(255, 255, 255);}
+.Warning h2 {color: white;}
+.Warning p {color: white;}
+.Warning ul {color: white;}
+.Warning h1 {font-size: 50px;}
+.Warning h1 {font-family: 'Times New Roman', Times, serif;}
+.Warning {margin: 15px;}
+.Warning {padding: 15px;}
+.Warning p {text-align: left;}
+.Warning h1 {text-decoration: underline wavy rgb(255, 255, 255) 5px;}
+    
+
+.HowTo {min-height: 100px;
+background-color: red;}
+.HowTo {min-height: 100px;
+background-color: rgb(224, 66, 166);}
+.HowTo h1 {color: rgb(255, 255, 255);}
+.HowTo h2 {color: white;}
+.HowTo p {color: white;}
+.HowTo p {text-align: right;}
+.HowTo ol {color: white;}
+.HowTo h1 {font-size: 50px;}
+.HowTo h1 {font-family: 'Times New Roman', Times, serif;}
+.HowTo {margin: 15px;}
+.HowTo {padding: 15px;}
+.HowTo p {text-align: left;}
+.HowTo h1 {text-decoration: underline wavy rgb(255, 255, 255) 5px;}
+    

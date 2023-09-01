@@ -27,4 +27,4 @@ const detFørsteBrand = document.querySelector("#brand1")
 console.log(detFørsteBrand.innerHTML)
 detFørsteBrand.innerHTML = "Vanish"
 console.log(detFørsteBrand.innerHTML)
-
+//ny kommentar

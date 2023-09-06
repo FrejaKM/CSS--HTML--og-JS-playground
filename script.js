@@ -198,3 +198,279 @@ linkCEl.appendChild(jsLinkC)
 jsTutorialEl.appendChild(linkAEl);
 jsTutorialEl.appendChild(linkBEl);
 jsTutorialEl.appendChild(linkCEl);
+
+/* 
+Simple comparisons:
+
+let one = 1, two = 2;
+one === one // er one identical to one? true
+one !== one // er one not identical to one? false
+
+one == one // true
+one == '1' // også true, fordi kun to "=" er not strict. 
+one === 1 // false
+one != '1' // false
+one != '2' // true
+one < two //true
+one > two //false
+one <= two //true
+one >= two //false
+10 >= two //true
+
+
+Arithmetic operators:
+
+2 + 5 //7
+2 - 1 //1
+2 * 5 //15
+36/6 //6
+
+20 % 2 //0 fordi den viser resten
+19 % 2 //1 fordi der vil være 1 i rest
+20 % 2 === 0 // true fordi man spørger om det er equal til 0 
+
+let counter = 0; 
+counter = counter + 1 //1
+counter += 1 //2
+counter++ //2
+counter += 5 //8
+counter += -4 //4
+counter -= 1 //3 fordi nu tæller den ned i stedet for op
+counter -- // samme som -=
+counter *= 2 //will double the value in counter
+'cat' + 'dog' //'catdog'
+'cat ' + 'dog' // 'cat dog'
+
+
+Logical operators:
+
+
+&& = and 
+|| (opt i) = or
+
+
+let animal1 = "abe", animal2 = "bjørn", animal3 = "haj"
+
+animal1 === 'abe' && animal2 === 'bjørn' //true. De tog && tjekker begge strings på samme tid
+
+animal1 ==='kat' && animal2 === 'bjørn' //false fordi ikke begge dele i dette statement er true
+
+animal1 === 'abe' || animal2 === 'bjørn' // true
+animal1 === 'abe' || animal2 === 'hund' //true fordi man spørger om enten det ene eller det andet er rigtigt. 
+animal1 === 'mus' || animal2 === 'ko' //false fordi ingen af de to strings er true
+
+// and's og or's kan også kombineres på samme linje. And's vil altid blive evalueret før or's. 
+
+animal1 === 'abe' || animal2 === 'kat' && animal3 === 'haj' // true 
+(animal1 === 'abe' || animal2 === 'kat') && animal3 === 'haj' // true
+
+!true //false
+!false //true
+
+// udråbstegnet konverterer også && til || og omvendt
+
+*/
+
+/* Conditionals: if 
+
+let svar = window.confirm ("Click OK, get true. Click Anuller, get false.");
+
+console.log(svar)
+
+if(svar === true) {
+    console.log("Du har trykket OK");
+} else {
+    console.log("Du sagde noget andet end OK");
+}
+
+let svar2 = window.prompt("Skriv JA, NEJ eller måske. Klik OK.");
+
+if (svar2 === "JA") {
+    console.log("Du svarede JA!");
+} else if (svar2 === "NEJ") {
+    console.log("Du svarede NEJ!");
+} else if (svar2 === "MÅSKE") {
+    console.log("Du svarede MÅSKE. Jeg ved ikke, hvad du mener med det");
+} else {
+    console.log("Dude, tag dig sammen");
+}
+*/
+
+
+//Conditionals: switch
+
+//Denne blok er det samme som blokken lavet med if-conditions, bare kortere/forsimplet. De kan cascade på en anden måde, som if-statement ikke gør
+
+/*
+let svar2 = window.prompt("Skriv JA, NEJ eller måske. Klik OK.");
+
+switch (svar2) {
+    case "JA":
+        console.log("Du sagde JA!");
+        break;
+    case "MÅSKE":
+        console.log("Du sagde MÅSKE!");
+        break;
+    case "NEJ":
+        console.log("Du sagde NEJ!");
+        break;
+        default: //samme som et else-statement
+            console.log("Tag dig sammen");
+            break;
+}
+
+
+// Terse ifs: One-liners. Fine for quick checks. 
+
+if (cherub === 'Cupid') consolge.log("Ouch, an arrow! OO I'm in love")
+else console.log("I feel nothing");
+
+
+var animal = 'cat'
+animal === 'cat'
+? console.log('You will be a cat herder')
+: console.log('You will be a dog cather');
+
+//The action to take if true = ?
+//The action to take if false= :
+
+// Type cheching: 
+
+typeof (det du vil tjekke) -> fortæller hvad der er tale om.
+
+osv... (se tutorial på LinkedIn Learning)
+*/
+
+// for loops: sequential:
+
+for (let i = 0; i < 10; i += 1) {
+console.log(i)
+} 
+
+//man kan også gøre sådan for at få den til at starte på 1:
+   
+for (let i = 1; i <= 10; i += 1) {
+console.log("ny måde", i)
+} 
+
+//loop over the contents of an array: 
+
+let pageNames = [
+    "Home",
+    "About us",
+    "Contact us",
+    "Playground",
+    "News",
+    "Blog"
+];
+
+// Writing a piece of code that will look through every item in the array and tell us the one we're looking at matches the actual title of the page we're on
+
+for (i = 0; i < pageNames.length; i += 1) { 
+    if (document.title === pageNames[i]) {
+        console.log("We ARE here:" + pageNames[i]);
+        break; //får den til at stoppe, når dette punkt er fundet
+        } else {
+        console.log("We are NOT here:" + pageNames[i]);
+        }
+    }
+
+//for at undgå at gentage sig selv, kan man skrive koden sådan i stedet: 
+
+let pageNames2 = [
+    "Home",
+    "About us",
+    "Contact us",
+    "Playground",
+    "News",
+    "Blog"
+];
+for (i = 0; i < pageNames2.length; i += 1) { 
+    let currentPageTitle = pageNames2 // ændrer til et meningsfuldt navn
+
+    if (document.title === currentPageTitle[i]) {
+        console.log("We ARE here:" + currentPageTitle[i]);
+        break; //får den til at stoppe, når dette punkt er fundet
+        } else {
+        console.log("We are NOT here:" + currentPageTitle[i]);
+        }
+    }
+
+    // for loops: enumerative -> used on arrays or objects 
+
+    //i array: 
+
+for (let p in pageNames) {
+    console.log(p, pageNames[p]);
+}
+
+// der findes også:
+
+for (let v of pageNames) {
+console.log(v);
+}
+    
+
+// der findes også: 
+
+let pages = {
+    first: "home",
+    second: "about us",
+    third: "contact us"
+};
+for (let p in pages) {
+    if (pages.hasOwnProperty(p)) {
+        console.log(p, pages[p]);
+    }
+}
+
+// set and map:
+
+//let mySet = new Set(); - stores each value excatly and only once
+//let myMap = new Map(); - must be accessed and changed using special methods
+
+// while loops: indeholder en conditions der kan stoppe loopet, i stedet for at man skal andsætte et break 
+
+
+
+var myList = [true, true, true, false, true, true];
+
+var myItem = null; 
+
+while (myItem !== false) { //my conditions is that as long as myItem is not false we're going to do som things:
+    console.log(
+        "myList has " + 
+        myList.length + 
+        " items now. This loop will keep going until we pop a false"
+    );
+
+    myItem = myList.pop()//will make my list one item shorter every loop
+}
+
+// der findes også do while loops
+
+//FUNCTIONS
+
+//en function declaration:
+function lyde() {
+    console.log("bøh");
+    console.log("atju");
+    console.log("muuuuuh");
+    console.log("vuf");
+}
+lyde(); //envoking the function
+
+//a function expression assigned to a variable:
+const lyde2 = function() {
+    console.log("bøh");
+    console.log("atju");
+    console.log("muuuuuh");
+    console.log("vuf");
+}
+
+//fuddify
+
+/* function fuddify() {
+
+}
+*/
